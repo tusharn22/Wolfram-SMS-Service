@@ -1,0 +1,19 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+<h1>Node Rocks</h1>
+<button onclick="sendData()">here</button>
+</body>
+<script type="text/javascript">
+  function sendData() {
+    $.post( "/fun", {
+      "name" : "Spencer",
+      "age" : 21
+    }, function( returnData ) {
+      console.log(returnData);
+    });
+  }
+</script>
+</html>
