@@ -6,7 +6,16 @@
 <h1>Node Rocks</h1>
 <button onclick="sendData()">here</button>
 </body>
-<script src="mscript.js">
+<script type="text/javascript">
+  var myJSON = {
+    "name" : "Spencer",
+    "age" : 21
+  };
 
+  function sendData() {
+    $.post( "/fun", myJSON, function( returnData ) {
+      console.log(returnData);
+    });
+  }
 </script>
 </html>
